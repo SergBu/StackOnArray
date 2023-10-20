@@ -74,6 +74,11 @@ namespace Stack
 
         public T Peek()
         {
+            if (count is 0)
+            {
+                throw new InvalidOperationException("Stack is empty");
+            }
+
             return items[count - 1];
         }
     }
